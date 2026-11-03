@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Резе и Дэндзи — история любви</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #080808;
+    color: #eee;
+    line-height: 1.8;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.92)),
+        url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1920&q=80")
+        center/cover;
+    z-index: -1;
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(180deg, transparent, #080808);
+}
+
+header h1 {
+    font-size: clamp(40px, 8vw, 90px);
+    color: #e85b75;
+    letter-spacing: 5px;
+    text-shadow: 0 0 30px #e85b7566;
+}
+
+header p {
+    font-size: 20px;
+    color: #ccc;
+    margin-top: 20px;
+    max-width: 650px;
+}
+
+header a {
+    margin-top: 40px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #e85b75;
+    padding: 12px 30px;
+    transition: 0.3s;
+}
+
+header a:hover {
+    background: #e85b75;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #090909ee;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e85b75;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 25px;
+}
+
+h2 {
+    font-size: 35px;
+    color: #e85b75;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+h3 {
+    color: #e88c9d;
+    margin: 20px 0 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #ccc;
+    font-size: 17px;
+}
+
+.story {
+    background: #151515dd;
+    padding: 30px;
+    border-left: 3px solid #e85b75;
+    border-radius: 5px;
+    margin: 25px 0;
+}
+
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.character {
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.character:hover {
+    transform: translateY(-5px);
+    border-color: #e85b75;
+}
+
+.character img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.character div {
+    padding: 20px;
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
+    font-size: 24px;
+    color: #e88c9d;
+    padding: 40px 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #050505;
+    color: #666;
+}
+
+.music {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 20;
+}
+
+.music button {
+    background: #e85b75;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.music button:hover {
+    background: #b83c55;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        margin: 5px;
+        display: inline-block;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    .character img {
+        height: 350px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Резе & Дэндзи</h1>
+    <p>
+        История о любви, которая могла изменить две жизни,
+        но оказалась сильнее обстоятельств и жестокого мира.
+    </p>
+    <a href="#love">Начать историю</a>
+</header>
+
+<nav>
+    <a href="#love">Любовь</a>
+    <a href="#characters">Персонажи</a>
+    <a href="#story">История</a>
+    <a href="#meaning">Смысл</a>
+    <a href="#ending">Концовка</a>
+</nav>
+
+<section id="love">
+    <h2>Что такое любовь?</h2>
+
+    <p>
+        Любовь — это чувство, которое заставляет человека видеть в другом
+        не просто внешность или красивую улыбку, а что-то особенное.
+        Это желание быть рядом, делиться моментами, чувствовать себя
+        нужным и понимать, что тебя принимают таким, какой ты есть.
+    </p>
+
+    <p>
+        Иногда любовь появляется неожиданно. Она может изменить привычный
+        мир человека, дать ему надежду и заставить мечтать о будущем.
+        Но любовь не всегда бывает простой и счастливой.
+    </p>
+
+    <p>
+        История Резе и Дэндзи из «Человека-бензопилы» показывает,
+        что между искренними чувствами и жестокостью окружающего мира
+        может существовать огромная пропасть.
+    </p>
+
+    <div class="quote">
+        «Иногда самое прекрасное в жизни — это то,
+        что не успело стать реальностью».
+    </div>
+</section>
+
+<section id="characters">
+    <h2>Главные герои</h2>
+
+    <div class="characters">
+
+        <div class="character">
+            <img
+            src="https://chainsaw-man.fandom.com/wiki/Special:FilePath/Reze.png"
+            alt="Резе">
+
+            <div>
+                <h3>Резе</h3>
+
+                <p>
+                    Загадочная девушка, работающая в кафе.
+                    Она выглядит весёлой, доброй и открытой.
+                    Резе умеет заинтересовать Дэндзи и показать
+                    ему мир, которого он раньше не знал.
+                </p>
+
+                <p>
+                    Но за её улыбкой скрывается тяжёлое прошлое.
+                    Она была воспитана как оружие и привыкла
+                    выполнять чужие приказы.
+                </p>
+            </div>
+        </div>
+
+        <div class="character">
+            <img
+            src="https://chainsaw-man.fandom.com/wiki/Special:FilePath/Denji.png"
+            alt="Дэндзи">
+
+            <div>
+                <h3>Дэндзи</h3>
+
+                <p>
+                    Парень, который большую часть жизни провёл
+                    в бедности и страданиях.
+                    Он мечтает о простых вещах: вкусной еде,
+                    любви, близости и нормальной жизни.
+                </p>
+
+                <p>
+                    Дэндзи не привык к настоящей заботе.
+                    Поэтому встреча с Резе становится для него
+                    чем-то особенным и неожиданным.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="story">
+    <h2>История Резе и Дэндзи</h2>
+
+    <div class="story">
+        <h3>Первая встреча</h3>
+
+        <p>
+            Дэндзи знакомится с Резе в телефонной будке во время дождя.
+            Она кажется обычной девушкой, которая работает в кафе.
+            Между ними начинается разговор, постепенно перерастающий
+            в знакомство.
+        </p>
+
+        <p>
+            Резе проявляет интерес к Дэндзи, смеётся над его шутками
+            и относится к нему иначе, чем большинство окружающих.
+            Для Дэндзи это становится настоящим открытием.
+        </p>
+    </div>
+
+    <div class="story">
+        <h3>Кафе, школа и бассейн</h3>
+
+        <p>
+            Они проводят время вместе. Резе рассказывает Дэндзи
+            о школе и предлагает посетить её ночью.
+            Она показывает ему обычные вещи, которые для него
+            всегда были недоступны.
+        </p>
+
+        <p>
+            Дэндзи начинает понимать, что ему нравится не только
+            внимание Резе, но и сама возможность жить обычной жизнью.
+            Рядом с ней он чувствует себя человеком, а не оружием.
+        </p>
+    </div>
+
+    <div class="story">
+        <h3>Фестиваль и поцелуй</h3>
+
+        <p>
+            Один из самых запоминающихся моментов — фестиваль
+            и поцелуй под фейерверками.
+            Для Дэндзи этот момент выглядит как настоящая романтика.
+        </p>
+
+        <p>
+            Но за красивой сценой скрывается опасность.
+            Резе оказывается не той, кем представлялась.
+            Её истинная задача связана с сердцем Дэндзи.
+        </p>
+    </div>
+
+    <div class="story">
+        <h3>Правда о Резе</h3>
+
+        <p>
+            Резе раскрывает свою настоящую сущность —
+            она гибрид демона-бомбы.
+            Их отношения превращаются в трагическую борьбу.
+        </p>
+
+        <p>
+            Дэндзи оказывается между чувствами к девушке
+            и необходимостью выжить.
+            Несмотря на жестокость происходящего,
+            он продолжает верить в возможность другой жизни.
+        </p>
+    </div>
+</section>
+
+<section id="meaning">
+    <h2>Что на самом деле означает их история?</h2>
+
+    <p>
+        История Резе и Дэндзи — не просто романтическая история.
+        Это рассказ о двух людях, которых лишили нормального детства.
+        Оба привыкли существовать в мире, где ими управляют,
+        где их желания не имеют значения.
+    </p>
+
+    <p>
+        Дэндзи мечтает о простом счастье.
+        Резе тоже могла бы захотеть обычной жизни:
+        ходить в школу, встречаться с любимым человеком,
+        работать в кафе и не бояться будущего.
+    </p>
+
+    <p>
+        Их отношения показывают, что иногда человек может
+        искренне привязаться к тому, кого изначально должен
+        использовать или уничтожить.
+    </p>
+
+    <p>
+        Самая трагичная часть заключается в том,
+        что Резе и Дэндзи могли бы быть счастливы,
+        если бы обстоятельства сложились иначе.
+    </p>
+
+    <div class="quote">
+        Любовь — это не только желание быть вместе.
+        Иногда это желание дать другому человеку свободу.
+    </div>
+</section>
+
+<section id="ending">
+    <h2>Концовка — несостоявшееся счастье</h2>
+
+    <p>
+        После всех событий Резе решает вернуться к Дэндзи.
+        Она меняет своё решение и хочет встретиться с ним в кафе.
+        Это один из самых эмоциональных моментов истории.
+    </p>
+
+    <p>
+        Дэндзи ждёт её, надеясь, что их отношения
+        могут начаться заново.
+        Возможно, впервые в жизни он действительно
+        хотел быть с кем-то не ради выгоды, а из-за чувств.
+    </p>
+
+    <p>
+        Но Резе не успевает прийти.
+        Её путь заканчивается трагически.
+        Дэндзи остаётся ждать девушку, которая так и не появилась.
+    </p>
+
+    <p>
+        Именно здесь история приобретает особую силу.
+        Резе могла бы стать человеком, с которым Дэндзи
+        обрёл бы простое счастье.
+        Но их мир не позволил этому случиться.
+    </p>
+
+    <div class="quote">
+        Иногда самое болезненное — не потерять любовь,
+        а так и не узнать, какой могла быть жизнь вместе.
+    </div>
+</section>
+
+<section>
+    <h2>Моё мнение</h2>
+
+    <p>
+        Мне кажется, история Резе и Дэндзи особенно трогательная,
+        потому что она показывает настоящую человеческую потребность
+        в любви и свободе.
+    </p>
+
+    <p>
+        Дэндзи никогда не требовал чего-то невероятного.
+        Он хотел обычной жизни, в которой его любят,
+        понимают и ждут.
+    </p>
+
+    <p>
+        Резе тоже заслуживала возможности выбирать собственную судьбу.
+        Возможно, именно поэтому её история вызывает столько эмоций:
+        она напоминает нам о том, насколько важно иметь свободу
+        и возможность быть рядом с тем, кого любишь.
+    </p>
+</section>
+
+<footer>
+    <p>Chainsaw Man — Reze & Denji</p>
+    <p>История о любви, мечтах и несостоявшемся счастье.</p>
+</footer>
+
+<div class="music">
+    <button onclick="toggleMusic()" id="musicButton">
+        ▶ Включить музыку
+    </button>
+</div>
+
+<audio id="music" loop autoplay>
+    <source src="in-the-pool.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("music");
+const button = document.getElementById("musicButton");
+
+music.volume = 0.35;
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        button.textContent = "❚❚ Остановить музыку";
+    } else {
+        music.pause();
+        button.textContent = "▶ Включить музыку";
+    }
+}
+
+// Попытка автоматического запуска
+window.addEventListener("load", () => {
+    music.play().then(() => {
+        button.textContent = "❚❚ Остановить музыку";
+    }).catch(() => {
+        button.textContent = "▶ Нажми для музыки";
+    });
+});
+</script>
+
+</body>
+</html>
